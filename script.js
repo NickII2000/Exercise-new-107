@@ -43,6 +43,8 @@ try {
 } catch (err) {
     // console.log('\n', err.name, '\n', err.message, '\n', err.stack);
     console.error('\n', err.name, '\n', err.message, '\n', err.stack);
+} finally {
+    console.log('It is all. Final.');
 }
 
 // const err = new Error('Пример ошибки');
