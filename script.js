@@ -6,12 +6,12 @@ const data = [
         tag: 'div'
     },
     {
-        id: '',
+        id: 'nav1', // добавляем id ''
         tag: 'nav'
     },
     {
         id: 'circle',
-        tag: 'span'
+        tag: '' // делаем ошибку (пустой тег) 'span'
     }
 ];
 
@@ -42,11 +42,16 @@ try {
     });
 } catch (err) {
     // console.log('\n', err.name, '\n', err.message, '\n', err.stack);
-    console.error('\n', err.name, '\n', err.message, '\n', err.stack);
+    if (err.name === 'SyntaxError') {
+        console.error('\n', err.name, '\n', err.message, '\n', err.stack);
+    } else {
+        throw err;
+    }
 } finally {
     console.log('It is all. Final!');
 }
 
+console.log('Still work');
 // const err = new Error('Пример ошибки');
 // const err = new SyntaxError('Пример ошибки');
 // console.log('\n', err.name, '\n', err.message, '\n', err.stack);
