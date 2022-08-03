@@ -19,7 +19,7 @@ data.forEach((blockObj, i) => {
     const block = document.createElement(blockObj.tag);
 
     if (!blockObj.id) {
-        // throw new Error(`В данных под номером ${i + 1} нет id`);
+        throw new Error(`В данных под номером ${i + 1} нет id`);
     }
 
     block.setAttribute('id', blockObj.id);
