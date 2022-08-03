@@ -27,5 +27,6 @@ data.forEach((blockObj, i) => {
     document.body.append(block);
 });
 
-const err = new Error('Пример ошибки');
+// const err = new Error('Пример ошибки');
+const err = new SyntaxError('Пример ошибки');
 console.log('\n', err.name, '\n', err.message, '\n', err.stack);
