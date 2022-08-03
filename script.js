@@ -15,11 +15,11 @@ const data = [
     }
 ];
 
-data.forEach(blockObj => {
+data.forEach((blockObj, i) => {
     const block = document.createElement(blockObj.tag);
 
     if (!blockObj.id) {
-        throw 'error';
+        throw new Error(`В данных под номером ${i + 1} нет id`);
     }
 
     block.setAttribute('id', blockObj.id);
