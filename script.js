@@ -45,7 +45,7 @@ try {
     if (err.name === 'SyntaxError') {
         console.error('\n', err.name, '\n', err.message, '\n', err.stack);
     } else {
-        // throw err;
+        throw err;
     }
 } finally {
     console.log('It is all. Final!');
